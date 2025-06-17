@@ -306,7 +306,6 @@ class SELCLoss(torch.nn.Module):
 
 
     def forward(self, output, label):
-        self.iter = self.iter + 1
         logits, final_feat = output
         loss_ce = self.initloss(logits, label)
 
